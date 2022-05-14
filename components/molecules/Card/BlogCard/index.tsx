@@ -22,22 +22,18 @@ const BlogCard = ({
   const container: React.LegacyRef<HTMLDivElement> = useRef(null)
   const [imageSize, setImageSize] = useState({ width: 325, height: 220 })
   useEffect(() => {
+    if (container.current?.clientWidth !== undefined) {
+      setImageSize({
+        width: container.current?.clientWidth,
+        height: container.current?.clientWidth / 1.5,
+      })
+    }
     window.addEventListener('resize', () => {
       if (container.current?.clientWidth !== undefined) {
         setImageSize({
           width: container.current?.clientWidth,
           height: container.current?.clientWidth / 1.5,
         })
-      }
-    })
-    window.addEventListener('load', () => {
-      console.log('load')
-      if (container.current?.clientWidth !== undefined) {
-        setImageSize({
-          width: container.current?.clientWidth,
-          height: container.current?.clientWidth / 1.5,
-        })
-        console.log((container.current?.clientWidth / 1.5))
       }
     })
   }, [])

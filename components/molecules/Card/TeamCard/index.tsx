@@ -10,19 +10,17 @@ const TeamCard = ({ imageSrc, job, name }: TeamCardProps) => {
   const container: React.LegacyRef<HTMLDivElement> = useRef(null)
   const [imageSize, setImageSize] = useState({ width: 328, height: 356 })
   useEffect(() => {
+    if (container.current?.clientWidth !== undefined) {
+      setImageSize({
+        width: container.current?.clientWidth,
+        height: container.current?.clientWidth * 1.1,
+      })
+    }
     window.addEventListener('resize', () => {
       if (container.current?.clientWidth !== undefined) {
         setImageSize({
           width: container.current?.clientWidth,
           height: container.current?.clientWidth * 1.085,
-        })
-      }
-    })
-    window.addEventListener('load', () => {
-      if (container.current?.clientWidth !== undefined) {
-        setImageSize({
-          width: container.current?.clientWidth,
-          height: container.current?.clientWidth * 1.1,
         })
       }
     })

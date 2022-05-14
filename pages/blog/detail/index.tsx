@@ -26,21 +26,19 @@ const BlogDetail = () => {
     height: 447,
   })
   useEffect(() => {
+    if (thumbnailContainer.current?.clientWidth !== undefined) {
+      setThumbnailSize({
+        width: thumbnailContainer.current?.clientWidth,
+        height: thumbnailContainer.current?.clientWidth / 1.43,
+      })
+    }
+    if (forestContainer.current?.clientWidth !== undefined) {
+      setForestImageSize({
+        width: forestContainer.current?.clientWidth,
+        height: forestContainer.current?.clientWidth / 1.9,
+      })
+    }
     window.addEventListener('resize', () => {
-      if (thumbnailContainer.current?.clientWidth !== undefined) {
-        setThumbnailSize({
-          width: thumbnailContainer.current?.clientWidth,
-          height: thumbnailContainer.current?.clientWidth / 1.43,
-        })
-      }
-      if (forestContainer.current?.clientWidth !== undefined) {
-        setForestImageSize({
-          width: forestContainer.current?.clientWidth,
-          height: forestContainer.current?.clientWidth / 1.9,
-        })
-      }
-    })
-    window.addEventListener('load', () => {
       if (thumbnailContainer.current?.clientWidth !== undefined) {
         setThumbnailSize({
           width: thumbnailContainer.current?.clientWidth,
