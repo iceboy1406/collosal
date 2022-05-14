@@ -17,7 +17,7 @@ const BlogCommentCard = ({
     <div className="w-full pb-12 border-b border-borderLight flex gap-6">
       <div className="">
         <div className="w-[50px] h-[50px] relative">
-          <Image src={avatarSrc} layout="fill" objectFit="cover" />
+          <Image src={avatarSrc} layout="fill" objectFit="cover" alt='Commentator Avatar' />
         </div>
       </div>
       <div className="space-y-5">

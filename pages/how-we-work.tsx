@@ -25,6 +25,7 @@ const HowWeWork = () => {
               quality={100}
               layout="fill"
               objectFit="contain"
+              alt='Some people discuss'
             />
           </div>
         </aside>
@@ -51,6 +52,7 @@ const HowWeWork = () => {
               quality={100}
               layout="fill"
               objectFit="contain"
+              alt='Development'
             />
           </div>
         </aside>
@@ -63,6 +65,7 @@ const HowWeWork = () => {
               quality={100}
               layout="fill"
               objectFit="contain"
+              alt='Project Asset'
             />
           </div>
         </aside>

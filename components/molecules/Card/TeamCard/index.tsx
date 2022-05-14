@@ -41,6 +41,7 @@ const TeamCard = ({ imageSrc, job, name }: TeamCardProps) => {
           height={imageSize.height}
           src={imageSrc}
           quality={80}
+          alt="Team Avatar"
         />
       </div>
       <div className="w-full bg-light px-8 py-7 grid gap-2">

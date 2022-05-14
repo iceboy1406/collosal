@@ -113,6 +113,7 @@ const BlogDetail = () => {
             quality={85}
             objectFit="cover"
             className="rounded-xl"
+            alt='figma'
           />
         </div>
         <div className="w-12/12 sm:w-10/12 md:w-8/12 mb-6" data-aos="fade-up">
@@ -149,6 +150,7 @@ const BlogDetail = () => {
             quality={80}
             objectFit="cover"
             className="rounded-xl"
+            alt='forest'
           />
         </div>
         <div className="w-12/12 sm:w-10/12 md:w-8/12 mb-10" data-aos="fade-up">

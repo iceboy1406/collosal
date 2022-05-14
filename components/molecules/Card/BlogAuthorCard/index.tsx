@@ -13,7 +13,7 @@ const BlogAuthorCard = ({ avatarSrc, bio, job, name }: BlogAuthorCardProps) => {
     <div className="w-full rounded-md bg-light p-6 flex flex-col gap-5 md:flex-row lg:gap-10">
       <div className="">
         <div className="relative w-[100px] h-[100px]">
-          <Image src={avatarSrc} layout="fill" objectFit="cover" />
+          <Image src={avatarSrc} layout="fill" objectFit="cover" alt='Author Avatar' />
         </div>
       </div>
       <div className="space-y-6">
@@ -23,17 +23,17 @@ const BlogAuthorCard = ({ avatarSrc, bio, job, name }: BlogAuthorCardProps) => {
             <Text textStyle="AuthorJob" value={job} />
           </div>
           <div className="flex gap-2.5">
-            <a href="https://twitter.com/" target={'_blank'}>
+            <a href="https://twitter.com/" target={'_blank'} rel="noreferrer">
               <div className="bg-light p-2.5 rounded-full text-xl text-white">
                 <FiTwitter />
               </div>
             </a>
-            <a href="https://www.facebook.com/" target={'_blank'}>
+            <a href="https://www.facebook.com/" target={'_blank'} rel="noreferrer">
               <div className="bg-light p-2.5 rounded-full text-xl text-white">
                 <FiFacebook />
               </div>
             </a>
-            <a href="https://www.linkedin.com/" target={'_blank'}>
+            <a href="https://www.linkedin.com/" target={'_blank'} rel="noreferrer">
               <div className="bg-light p-2.5 rounded-full text-xl text-white">
                 <FiLinkedin />
               </div>

@@ -50,6 +50,7 @@ const BlogCard = ({
           src={thumbnailSrc}
           quality={80}
           className='rounded-xl'
+          alt='Blog Thumbnail'
         />
       </div>
       <div className="space-y-2.5">
@@ -57,7 +58,7 @@ const BlogCard = ({
           <Text textStyle='BlogLead' value={lead} />
       </div>
       <div className="flex gap-5">
-          <Image src={authorAvatarSrc} width={50} height={50} />
+          <Image src={authorAvatarSrc} width={50} height={50} alt="Blog Author Avatar" />
           <div className="">
               <Text textStyle='AuthorNamePreview' value={authorName}  />
               <Text textStyle='BlogMeta' value={`${launchDate} • ${readTime} read`}  />
