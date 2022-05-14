@@ -1,0 +1,27 @@
+<svg width="429" height="312" viewBox="0 0 429 312" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect y="0.507568" width="429" height="311" rx="10" fill="white" fill-opacity="0.1"/>
+<circle cx="31" cy="30.5076" r="5" fill="#FC165B"/>
+<circle cx="47" cy="30.5076" r="5" fill="#FCA016"/>
+<circle cx="63" cy="30.5076" r="5" fill="#16FCA9"/>
+<path d="M109.5 64.5076C109.5 63.1269 110.619 62.0076 112 62.0076H318C319.381 62.0076 320.5 63.1269 320.5 64.5076V311.008H109.5V64.5076Z" fill="white" fill-opacity="0.1" stroke="#44C7FF"/>
+<path d="M313 223.508L322.427 246.134L325.773 236.281L335.627 232.934L313 223.508Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="127" y="117.508" width="176" height="87" rx="3" fill="white" fill-opacity="0.1"/>
+<rect x="26" y="69" width="21" height="21" rx="3" fill="white" fill-opacity="0.1"/>
+<rect x="26" y="102" width="21" height="21" rx="3" fill="white" fill-opacity="0.1"/>
+<rect x="26" y="135" width="21" height="21" rx="3" fill="white" fill-opacity="0.1"/>
+<rect x="26" y="168" width="21" height="21" rx="3" fill="white" fill-opacity="0.1"/>
+<rect x="57" y="69" width="21" height="21" rx="3" fill="white" fill-opacity="0.1"/>
+<rect x="341" y="63" width="56" height="55" rx="3" fill="white" fill-opacity="0.1"/>
+<rect x="341" y="135" width="56" height="21" rx="3" fill="white" fill-opacity="0.1"/>
+<rect x="341" y="173" width="56" height="43" rx="3" fill="white" fill-opacity="0.1"/>
+<rect x="26" y="205" width="52" height="59" rx="3" fill="white" fill-opacity="0.1"/>
+<rect x="57" y="102" width="21" height="21" rx="3" fill="white" fill-opacity="0.1"/>
+<rect x="57" y="135" width="21" height="21" rx="3" fill="white" fill-opacity="0.1"/>
+<rect x="57" y="168" width="21" height="21" rx="3" fill="white" fill-opacity="0.1"/>
+<rect x="127" y="213.508" width="84" height="87" rx="3" fill="white" fill-opacity="0.1"/>
+<rect x="219" y="213.508" width="84" height="87" rx="3" fill="white" fill-opacity="0.1"/>
+<rect width="58" height="15" rx="3" transform="matrix(1 0 0 -1 186 97.5076)" fill="white" fill-opacity="0.1"/>
+<rect width="15" height="15" rx="3" transform="matrix(1 0 0 -1 127 97.5076)" fill="white" fill-opacity="0.1"/>
+<rect x="0.5" y="-0.5" width="7" height="7" transform="matrix(1 0 0 -1 317 64.5076)" fill="white" stroke="#44C7FF"/>
+<rect x="0.5" y="-0.5" width="7" height="7" transform="matrix(1 0 0 -1 105 64.5076)" fill="white" stroke="#44C7FF"/>
+</svg>

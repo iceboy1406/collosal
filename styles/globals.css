@@ -1,16 +1,39 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
+@layer base {
+  html {
+    font-family: 'Noto Sans', sans-serif;
+  }
 
-* {
-  box-sizing: border-box;
+  span {
+    @apply block !important;
+  }
+  input,textarea, select {
+    @apply focus:outline-none;
+  }
+  section {
+    @apply my-32;
+  }
+  
+}
+@layer components {
+  
+  .swiper {
+    @apply px-4 sm:px-24 md:px-36 lg:px-64 xl:px-72 pb-24 !important;
+  }
+  .swiper-pagination {
+    @apply flex flex-row justify-center !important;
+  }
+  .swiper-pagination-bullet {
+    @apply bg-white bg-opacity-20 w-4 h-4 !important;
+  }
+  .swiper-pagination-bullet-active {
+    @apply bg-white !important;
+  }
+  .swiper-slide-active {
+    @apply border-2 border-primary mt-0 !important;
+  }
 }
