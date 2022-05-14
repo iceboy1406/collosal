@@ -30,17 +30,17 @@ const BlogCard = ({
         })
       }
     })
-  }, [container])
-  useEffect(() => {
-    window.addEventListener('DOMContentLoaded', () => {
+    window.addEventListener('load', () => {
+      console.log('load')
       if (container.current?.clientWidth !== undefined) {
         setImageSize({
           width: container.current?.clientWidth,
           height: container.current?.clientWidth / 1.5,
         })
+        console.log((container.current?.clientWidth / 1.5))
       }
     })
-  }, [container])
+  }, [])
   return (
     <div className="w-full space-y-6" ref={container}>
       <div className="">

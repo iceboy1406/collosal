@@ -11,21 +11,15 @@ const TeamCard = ({ imageSrc, job, name }: TeamCardProps) => {
   const [imageSize, setImageSize] = useState({ width: 328, height: 356 })
   useEffect(() => {
     window.addEventListener('resize', () => {
-      if (
-        container.current?.clientWidth !== undefined
-      ) {
+      if (container.current?.clientWidth !== undefined) {
         setImageSize({
           width: container.current?.clientWidth,
           height: container.current?.clientWidth * 1.085,
         })
       }
     })
-  }, [container])
-  useEffect(() => {
     window.addEventListener('load', () => {
-      if (
-        container.current?.clientWidth !== undefined
-      ) {
+      if (container.current?.clientWidth !== undefined) {
         setImageSize({
           width: container.current?.clientWidth,
           height: container.current?.clientWidth * 1.1,

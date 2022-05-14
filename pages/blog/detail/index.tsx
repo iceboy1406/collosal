@@ -40,8 +40,6 @@ const BlogDetail = () => {
         })
       }
     })
-  }, [thumbnailContainer])
-  useEffect(() => {
     window.addEventListener('load', () => {
       if (thumbnailContainer.current?.clientWidth !== undefined) {
         setThumbnailSize({
@@ -56,7 +54,7 @@ const BlogDetail = () => {
         })
       }
     })
-  }, [thumbnailContainer])
+  }, [thumbnailContainer, forestContainer])
   const blogListData: BlogCardProps[] = [
     {
       authorAvatarSrc: '/images/blog-author-4.webp',
@@ -113,7 +111,7 @@ const BlogDetail = () => {
             quality={85}
             objectFit="cover"
             className="rounded-xl"
-            alt='figma'
+            alt="figma"
           />
         </div>
         <div className="w-12/12 sm:w-10/12 md:w-8/12 mb-6" data-aos="fade-up">
@@ -150,7 +148,7 @@ const BlogDetail = () => {
             quality={80}
             objectFit="cover"
             className="rounded-xl"
-            alt='forest'
+            alt="forest"
           />
         </div>
         <div className="w-12/12 sm:w-10/12 md:w-8/12 mb-10" data-aos="fade-up">
@@ -262,7 +260,7 @@ const BlogDetail = () => {
         <div className="text-center">
           <Text textStyle="SectionTitle" value={`Responses`} />
         </div>
-        <div className="w-8/12 grid gap-12">
+        <div className="w-12/12 md:w-8/12 grid gap-12">
           <div data-aos="fade-up">
             <BlogCommentCard
               avatarSrc="/images/comment-avatar-1.webp"
@@ -288,7 +286,10 @@ const BlogDetail = () => {
             />
           </div>
         </div>
-        <div className="w-8/12 bg-light rounded-md p-10 space-y-6" data-aos="fade-up">
+        <div
+          className="w-12/12 md:w-8/12 bg-light rounded-md p-10 space-y-6"
+          data-aos="fade-up"
+        >
           <div className="grid grid-cols-2 gap-5">
             <InputGroup label="Name" />
             <InputGroup label="Email" />

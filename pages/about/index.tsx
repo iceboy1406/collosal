@@ -20,6 +20,7 @@ const About = () => {
               objectFit="contain"
               quality={80}
               alt="Programmers when coding in their laptop"
+              
             />
           </div>
         </aside>

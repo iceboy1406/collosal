@@ -72,7 +72,7 @@ const Blog = () => {
             badge="BLOG"
             title="Get precise knowledge wherever you are"
           />
-        </div>
+        </div> 
       </section>
       <LineDivider />
       <section className="grid place-items-center gap-16">
