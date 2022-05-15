@@ -4,11 +4,14 @@ import Footer from 'components/organisms/Footer'
 import React, { ReactNode } from 'react'
 import Container from 'components/templates/Container'
 import Head from 'next/head'
+import { UAParser } from 'ua-parser-js'
 interface PageTemplateProps {
   children: ReactNode[] | JSX.Element
   title?: string
 }
 const PageTemplate = ({ children, title = 'Collosal' }: PageTemplateProps) => {
+  const browserName = UAParser.UAParser().browser.name
+
   return (
     <>
       <Head>
@@ -26,7 +29,11 @@ const PageTemplate = ({ children, title = 'Collosal' }: PageTemplateProps) => {
         <div className="w-full h-full min-h-screen relative bg-cover">
           <div className="w-full h-full min-h-screen relative before:absolute before:w-full before:h-full before:min-h-screen before:bg-[url('/images/page-background.svg')] before:bg-cover before:blur-[175px]">
             {/* Space for navbar, because navbar is absolute */}
-            <div className="w-full h-full min-h-screen relative bg-dark/[.85]">
+            <div
+              className={`w-full h-full min-h-screen relative ${
+                browserName == 'Firefox' ? 'bg-dark/[.85]' : 'bg-dark/[.80]'
+              } `}
+            >
               <div className="h-[105px]"></div>
               {/* Padding */}
               <Container>
