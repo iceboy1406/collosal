@@ -13,7 +13,7 @@ const TermOfService = () => {
       </section>
       <LineDivider />
       <section className="grid place-items-center" data-aos="fade-up">
-        <div className="w-8/12 space-y-10">
+        <div className="w-full sm:w-10/12 md:w-8/12 space-y-10">
           <Text
             textStyle="PageContent"
             value={`
