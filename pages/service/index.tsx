@@ -51,7 +51,7 @@ const Services = () => {
               />
             </div>
             <div className="grid gap-6 w-full place-items-end md:w-8/12 lg:w-full">
-              <aside className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              <aside className="w-full grid grid-cols-1 sm:grid-cols-2 gap-5">
                 <SmallCardIcon
                   title="Beautiful Design"
                   description="Create a modern design for your idea."
