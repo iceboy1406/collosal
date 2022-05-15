@@ -23,19 +23,20 @@ const PageTemplate = ({ children, title = 'Collosal' }: PageTemplateProps) => {
       <NavBar />
       {/* Background */}
       <div className="w-full h-fit min-h-screen bg-dark overflow-x-hidden">
-        <div className="w-full h-full min-h-screen relative bg-[url('/images/page-background.svg')] bg-cover">
-          <div className="w-full h-full min-h-screen relative backdrop-blur-[175px] bg-dark/[.85] overflow-visible">
+        <div className="w-full h-full min-h-screen relative bg-cover">
+          <div className="w-full h-full min-h-screen relative before:absolute before:w-full before:h-full before:min-h-screen before:bg-[url('/images/page-background.svg')] before:bg-cover before:blur-[175px]">
             {/* Space for navbar, because navbar is absolute */}
-            <div className="h-[105px]"></div>
-            {/* Padding */}
-            <Container>
-              {children}
-              <div data-aos="fade-right">
-
-              <CallOut />
-              </div>
-              <Footer />
-            </Container>
+            <div className="w-full h-full min-h-screen relative bg-dark/[.85]">
+              <div className="h-[105px]"></div>
+              {/* Padding */}
+              <Container>
+                {children}
+                <div data-aos="fade-right">
+                  <CallOut />
+                </div>
+                <Footer />
+              </Container>
+            </div>
           </div>
         </div>
       </div>

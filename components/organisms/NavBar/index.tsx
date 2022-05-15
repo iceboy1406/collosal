@@ -4,11 +4,14 @@ import NavLink from 'components/atoms/NavLink'
 import ButtonLink from 'components/atoms/Button/ButtonLink'
 import Container from 'components/templates/Container'
 import { FiMenu, FiX } from 'react-icons/fi'
+import UAParser from 'ua-parser-js'
 const NavBar = () => {
+  
   const [isOpen, setIsOpen] = useState<boolean>(false)
   const [isScrolled, setIsScrolled] = useState<boolean>(false)
-
+  const browserName = UAParser.UAParser().browser.name
   useEffect(() => {
+    console.log(UAParser.UAParser().browser.name)
     window.addEventListener('scroll', () => {
       if (window.scrollY > 150) {
         setIsScrolled(true)
@@ -35,7 +38,7 @@ const NavBar = () => {
       >
         <Container>
           <div
-            className={`bg-light px-6 py-4 w-full rounded-md backdrop-blur-[50px] ${
+            className={`${browserName == 'Firefox' ? 'bg-gray-900' : 'bg-light'} px-6 py-4 w-full rounded-md backdrop-blur-3xl ${
               isScrolled || isOpen ? '' : 'lg:bg-transparent lg:px-0'
             }`}
           >
