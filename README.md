@@ -1,3 +1,22 @@
+# Collosal
+Collosal is a company profile website for a company who serve for Application Development, Design and Maintenance. It's just a fictitious website. UI Design of this website made by Muhamad Nauval Azhar and I implement it to a real website. It has 15 page same as design and the contents of this website are static.
+## Technology Used
+
+ - Next JS - A React JS Framework and alternative boilerplate than CRA. I use Typescript btw
+	https://nextjs.org/
+ - Tailwind CSS - An utility class CSS framework
+	https://tailwindcss.com/
+ - Swiper JS - Library for carousel that easy to custom
+	https://swiperjs.com/
+ - React Icon - A library that include so many popular icons with SVG based
+	https://github.com/react-icons/react-icons
+ - AOS - A library to help control animation when scroll
+	https://github.com/michalsnik/aos
+
+## Demo
+You can see the demo on this link below
+https://collosal.vercel.app
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
