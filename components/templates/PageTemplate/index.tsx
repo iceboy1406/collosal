@@ -4,7 +4,6 @@ import Footer from 'components/organisms/Footer'
 import React, { ReactNode, useEffect } from 'react'
 import Container from 'components/templates/Container'
 import Head from 'next/head'
-import { UAParser } from 'ua-parser-js'
 import useGetBrowserName from 'hooks/useGetBrowserName'
 interface PageTemplateProps {
   children: ReactNode[] | JSX.Element
@@ -12,18 +11,10 @@ interface PageTemplateProps {
 }
 const PageTemplate = ({ children, title = 'Collosal' }: PageTemplateProps) => {
   const browserName = useGetBrowserName()
-  useEffect(() => {
-    console.log(browserName)
-  }, [])
   return (
     <>
       <Head>
         <title>{title}</title>
-        <link
-          rel="shortcut icon"
-          href="/images/favicon.svg"
-          type="image/x-icon"
-        />
       </Head>
       {/* Navbar Fixed on top */}
       <NavBar />
