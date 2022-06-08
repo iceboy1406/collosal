@@ -1,6 +1,9 @@
 # Collosal
 ![thumbnail](https://raw.githubusercontent.com/iceboy1406/collosal/main/public/images/screenshots/home.png)
-
+<p align="center">
+<a href="https://collosal.vercel.app/">Demo Page</a>&nbsp;&nbsp;&nbsp;
+<a href="https://www.figma.com/community/file/1061303456713302684">Figma Link</a>&nbsp;&nbsp;&nbsp;
+</p>
 Collosal is a company profile website for a company who serve for Application Development, Design and Maintenance. It's just a fictitious website. UI Design of this website made by Muhamad Nauval Azhar and I implement it to a real website. It has 15 page same as design and the contents of this website are static.
 ## Technology Used
 
@@ -10,9 +13,6 @@ Collosal is a company profile website for a company who serve for Application De
  - [React Icon](https://github.com/react-icons/react-icons) - A library that include so many popular icons with SVG based
  - [AOS](https://github.com/michalsnik/aos) - A library to help control animation when scroll
 
-## Demo
-You can see the demo on this link below
-https://collosal.vercel.app
 
 ## A little story about performance optimization
 Although this website just for fun, I keep trying to optimize performance of this website. 
@@ -36,5 +36,3 @@ But in mobile it need much longer, it need 2.6s-3s to load. Yeah thats not faste
 ## Author
 This website coded by [Eko Susilo](https://github.com/iceboy1406)
 And design by [Muhamad Nauval Azhar](https://nauv.al/)
-## Figma Link
-If you also want to slicing this website from UI Design you can visit [here](https://www.figma.com/community/file/1061303456713302684)
