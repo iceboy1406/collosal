@@ -11,16 +11,16 @@
   span {
     @apply block !important;
   }
-  input,textarea, select {
+  input,
+  textarea,
+  select {
     @apply focus:outline-none;
   }
   section {
     @apply my-32;
   }
-  
 }
 @layer components {
-  
   .swiper {
     @apply px-4 sm:px-24 md:px-36 lg:px-64 xl:px-72 pb-24 !important;
   }

@@ -5,6 +5,7 @@ const useMobileDeviceDetection: () => boolean = () => {
   useEffect(() => {
     deviceTypeHandler()
     window.addEventListener('resize', () => deviceTypeHandler())
+    window.addEventListener('scroll', () => deviceTypeHandler())
   }, [])
 
   const deviceTypeHandler: () => void = () => {

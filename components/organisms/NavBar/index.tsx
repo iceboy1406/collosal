@@ -5,13 +5,14 @@ import ButtonLink from 'components/atoms/Button/ButtonLink'
 import Container from 'components/templates/Container'
 import { FiMenu, FiX } from 'react-icons/fi'
 import UAParser from 'ua-parser-js'
+import useMobileDeviceDetection from 'hooks/useMobileDetection'
+import useGetBrowserName from 'hooks/useGetBrowserName'
 const NavBar = () => {
-  
   const [isOpen, setIsOpen] = useState<boolean>(false)
   const [isScrolled, setIsScrolled] = useState<boolean>(false)
-  const browserName = UAParser.UAParser().browser.name
+  const browserName = useGetBrowserName()
+  const isMobile = useMobileDeviceDetection()
   useEffect(() => {
-    console.log(UAParser.UAParser().browser.name)
     window.addEventListener('scroll', () => {
       if (window.scrollY > 150) {
         setIsScrolled(true)
@@ -38,7 +39,9 @@ const NavBar = () => {
       >
         <Container>
           <div
-            className={`${browserName == 'Firefox' ? 'bg-gray-900' : 'bg-light'} px-6 py-4 w-full rounded-md backdrop-blur-3xl ${
+            className={`${
+              browserName == 'Firefox' ? 'bg-gray-900' : 'bg-light'
+            } px-6 py-4 w-full rounded-md backdrop-blur-3xl ${
               isScrolled || isOpen ? '' : 'lg:bg-transparent lg:px-0'
             }`}
           >
@@ -47,7 +50,9 @@ const NavBar = () => {
                 <NavBrand />
                 <div className="lg:hidden" onClick={() => setIsOpen(!isOpen)}>
                   <div
-                    className='text-white text-2xl'
+                    className={`text-white text-2xl ${
+                      isMobile ? 'cursor-default' : 'cursor-pointer'
+                    }`}
                   >
                     {isOpen ? <FiX /> : <FiMenu />}
                   </div>
