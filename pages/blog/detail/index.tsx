@@ -38,7 +38,8 @@ const BlogDetail = () => {
         height: forestContainer.current?.clientWidth / 1.9,
       })
     }
-    window.addEventListener('resize', () => {
+
+    const resizeListener = () => {
       if (thumbnailContainer.current?.clientWidth !== undefined) {
         setThumbnailSize({
           width: thumbnailContainer.current?.clientWidth,
@@ -51,7 +52,13 @@ const BlogDetail = () => {
           height: forestContainer.current?.clientWidth / 1.9,
         })
       }
-    })
+    };
+
+    window.addEventListener('resize', resizeListener)
+
+    return () => {
+      window.removeEventListener('resize', resizeListener);
+    };
   }, [thumbnailContainer, forestContainer])
   const blogListData: BlogCardProps[] = [
     {
