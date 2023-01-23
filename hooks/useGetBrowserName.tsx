@@ -5,9 +5,12 @@ const useGetBrowserName = () => {
   const [browserName, setBrowserName] = useState('Chrome')
   useEffect(() => {
     setBrowserName(`${UAParser.UAParser().browser.name}`)
-    window.addEventListener('resize', () =>
-      setBrowserName(`${UAParser.UAParser().browser.name}`)
-    )
+    const updateBrowserName = () => setBrowserName(`${UAParser.UAParser().browser.name}`);
+    window.addEventListener('resize', updateBrowserName)
+
+    return () => {
+      window.removeEventListener('resize', updateBrowserName);
+    };
   })
   return browserName
 }

@@ -16,14 +16,21 @@ const TeamCard = ({ imageSrc, job, name }: TeamCardProps) => {
         height: container.current?.clientWidth * 1.1,
       })
     }
-    window.addEventListener('resize', () => {
+
+    const resizeListener = () => {
       if (container.current?.clientWidth !== undefined) {
         setImageSize({
           width: container.current?.clientWidth,
           height: container.current?.clientWidth * 1.085,
         })
       }
-    })
+    };
+
+    window.addEventListener('resize', resizeListener)
+
+    return () => {
+      window.removeEventListener('resize', resizeListener);
+    };
   }, [container])
   return (
     <div className="w-full rounded-md overflow-hidden" ref={container}>

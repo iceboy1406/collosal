@@ -13,13 +13,19 @@ const NavBar = () => {
   const browserName = useGetBrowserName()
   const isMobile = useMobileDeviceDetection()
   useEffect(() => {
-    window.addEventListener('scroll', () => {
+    const scrollListener = () => {
       if (window.scrollY > 150) {
         setIsScrolled(true)
       } else {
         setIsScrolled(false)
       }
-    })
+    };
+
+    window.addEventListener('scroll', scrollListener)
+
+    return () => {
+      window.removeEventListener('scroll', scrollListener);
+    };
   }, [])
   useEffect(() => {
     if (isOpen) {

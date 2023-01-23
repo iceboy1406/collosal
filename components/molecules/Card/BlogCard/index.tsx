@@ -28,14 +28,21 @@ const BlogCard = ({
         height: container.current?.clientWidth / 1.5,
       })
     }
-    window.addEventListener('resize', () => {
+
+    const resizeListener = () => {
       if (container.current?.clientWidth !== undefined) {
         setImageSize({
           width: container.current?.clientWidth,
           height: container.current?.clientWidth / 1.5,
         })
       }
-    })
+    };
+
+    window.addEventListener('resize', resizeListener)
+
+    return () => {
+      window.removeEventListener('resize', resizeListener);
+    };
   }, [])
   return (
     <div className="w-full space-y-6" ref={container}>

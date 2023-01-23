@@ -4,8 +4,16 @@ const useMobileDeviceDetection: () => boolean = () => {
   const [isMobile, setIsMobile] = useState<boolean>(false)
   useEffect(() => {
     deviceTypeHandler()
-    window.addEventListener('resize', () => deviceTypeHandler())
-    window.addEventListener('scroll', () => deviceTypeHandler())
+    const resizeListener = () => deviceTypeHandler();
+    window.addEventListener('resize', resizeListener)
+
+    const scrollListener = () => deviceTypeHandler();
+    window.addEventListener('scroll', scrollListener)
+
+    return () => {
+      window.removeEventListener('resize', resizeListener);
+      window.removeEventListener('scroll', scrollListener);
+    };
   }, [])
 
   const deviceTypeHandler: () => void = () => {
